@@ -1,0 +1,6 @@
+version: "3"
+services:
+    serverdados:
+        image: "serverdados"
+        ports:
+           - "5002:5002"
