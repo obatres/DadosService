@@ -1,6 +1,6 @@
 version: "3"
 services:
     serverdados:
-        image: "serverdados"
+        build: .
         ports:
            - "5002:5002"
