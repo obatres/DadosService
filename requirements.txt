@@ -5,5 +5,6 @@ Jinja2==2.11.2
 MarkupSafe==1.1.1
 pymongo==3.10.1
 Werkzeug==1.0.1
-jwt==1.0.0
-
+pywt==1.0.0
+PyJWT==1.7.1
+flask-cors == 3.0.9

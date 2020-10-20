@@ -2,8 +2,10 @@ from flask import Flask, request, json, Response
 from random import randint as ran
 import json
 from autenticacion import token_required
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/tirar/<int:cantidad>', methods=['GET'])
@@ -11,13 +13,15 @@ app = Flask(__name__)
 def index(cantidad):
     res = {'Token': "autorizado"}
     return Response(response=json.dumps(res),
-                        mimetype='application/json')                
+                    mimetype='application/json')
 
-@app.route('/token',methods=['GET'])
+
+@app.route('/token', methods=['GET'])
 def token_auth():
     res = {'Token': "autorizado"}
     return Response(response=json.dumps(res),
-                        mimetype='application/json')
+                    mimetype='application/json')
+
 
 if __name__ == '__main__':
 
