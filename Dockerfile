@@ -27,6 +27,8 @@ RUN apk add py-cryptography
 COPY ["Service.py", "/app"]
 
 COPY ["autenticacion.py", "/app"]
+
+COPY ["controlDados.py", "/app"]
 # Exposing an internal port
 EXPOSE 5002
 
